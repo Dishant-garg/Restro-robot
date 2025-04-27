@@ -72,13 +72,12 @@ This will launch a Streamlit app in your browser where you can interact with the
 
 ### Example Queries
 
-- "What's on the menu at Biryani By Kilo in Koramangala?"
-- "Show me vegetarian options in Indiranagar"
+- "What's on the menu at Behrouz Biryani?"
+- "Show me vegetarian options "
 - "Give me some good non-veg food recommendations"
 - "What dishes does Faasos offer?"
 - "Compare the menus of Behrouz Biryani and Faasos"
 - "What's the price range for rolls at Faasos?"
-- "Tell me about Chinese restaurants near me"
 
 ## Architecture
 
@@ -102,14 +101,15 @@ restro-robot/
 │   │   └── kg_retriever.py    # Knowledge graph retrieval logic
 │   ├── knowledge_base/
 │   │   └── kg_builder.py      # Knowledge graph construction
-│   └── utils/                 # Helper functions
+│   └── utils/
+│       ├── config.py
+│       └── text_utils.py      # Helper functions
 ├── web_scrapper/              # Web scraping components
 │   ├── first.py               # Area and restaurant discovery
 │   ├── seonding.py            # Menu extraction
 │   └── README.md              # Web scraper documentation
 ├── data/                      # Restaurant and menu data
-│   └── eatsure_all_restaurants.json  # Scraped restaurant data
-├── tests/                     # Unit and integration tests
+│   └── eatsure_all_restaurants.json  # Scraped restaurant data           
 └── README.md                  # This file
 ```
 
