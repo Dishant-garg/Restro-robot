@@ -24,24 +24,7 @@ langchain-groq
 langchain-huggingface
 langchain-embeddings
 
-# For environment variables
-python-dotenv
-
-# For prompt templates
-jinja2
-
-# Optional: For progress bars, etc.
-tqdm
-
-# If using Ollama or llama-cpp-python for local LLMs (optional)
-# ollama
-# llama-cpp-python
-
-# For OpenAI/Groq LLMs (if needed)
-openai
-
-# For web scraping (if needed)
-lxml
-
-# For compatibility
-typing-extensions
+requests
+pandas
+bs4
+beautifulsoup4
