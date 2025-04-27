@@ -65,7 +65,7 @@ See the [Web Scraper README](./web_scrapper/README.md) for detailed instructions
 After collecting data, you can start the chat interface:
 
 ```bash
-python src/web/app.py
+streamlit run src/web/app.py
 ```
 
 This will launch a Streamlit app in your browser where you can interact with the restaurant chatbot.
