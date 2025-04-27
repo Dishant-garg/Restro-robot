@@ -133,11 +133,15 @@ def main():
         except Exception as e:
             print(f"   ✗ Error scraping {url}: {e}")
     
-    # Save combined data to a single file
-    output_file = "eatsure_all_restaurants.json"
+    # Save combined data to data/raw directory in project
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    data_raw_dir = os.path.join(project_root, "data")
+    os.makedirs(data_raw_dir, exist_ok=True)
+
+    output_file = os.path.join(data_raw_dir, "eatsure_all_restaurants.json")
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(all_data, f, indent=2, ensure_ascii=False)
-    
+
     print(f"\n✅ Saved {len(all_data['data'])} restaurants to {output_file}")
 
 if __name__ == '__main__':

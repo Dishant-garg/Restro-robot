@@ -50,10 +50,27 @@ class KGRetriever(BaseRetriever):
     def _is_vegetarian_query(self, query: str) -> bool:
         """Check if query is asking about vegetarian options."""
         lower_query = query.lower()
-        return ('vegetarian' in lower_query or 
-                'veg option' in lower_query or 
-                'veg food' in lower_query or 
-                'veg dish' in lower_query)
+        
+        # First check if it's explicitly non-vegetarian
+        if ('non-veg' in lower_query or 
+            'non veg' in lower_query or
+            'nonveg' in lower_query):
+            print(">>> Detected non-vegetarian query")  # Added debug print
+            return False
+            
+        # More carefully check vegetarian patterns to avoid matching "non veg food" as "veg food"
+        veg_patterns = [
+            r'\bvegetarian\b',
+            r'\bveg\s+option',
+            r'\bveg\s+food',
+            r'\bveg\s+dish'
+        ]
+        
+        for pattern in veg_patterns:
+            if re.search(pattern, lower_query):
+                return True
+        
+        return False
 
     def _is_menu_query(self, query: str) -> bool:
         """Check if query is asking about a restaurant's menu."""

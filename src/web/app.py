@@ -166,7 +166,7 @@ st.markdown(
 )
 
 st.markdown("""
-    <h3 style='text-align: left; color: black; padding-top: 35px; border-bottom: 3px solid orange;'>
+    <h3 style='text-align: left; color: white; padding-top: 35px; border-bottom: 3px solid orange;'>
         Discover Local Restaurants & Menus 🍽️🥘
     </h3>""", unsafe_allow_html=True)
 
@@ -184,11 +184,11 @@ Feel free to ask me anything about the restaurants in our database!
 """
 
 with st.sidebar:
-    st.title('🤖FoodBot: Your Local Restaurant Guide')
+    st.title('🤖RestroBot: Your Local Restaurant Guide')
     st.markdown(side_bar_message)
 
 initial_message = """
-    Hi there! I'm your FoodBot 🤖
+    Hi there! I'm your RestroBot 🤖
     Here are some questions you might ask me:\n
     🍽️ Tell me about dishes in Behrouz Biryani menu ?\n
     🍽️ What vegetarian options are available?\n
