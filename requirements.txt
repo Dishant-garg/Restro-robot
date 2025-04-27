@@ -1,0 +1,47 @@
+# Core Python libraries
+requests
+beautifulsoup4
+
+# Data handling
+numpy
+pandas
+
+# For JSON and YAML config
+pyyaml
+
+# For embeddings and vector search
+sentence-transformers
+faiss-cpu
+
+# For web app
+streamlit
+
+# For LLM and RAG
+langchain
+langchain-core
+langchain-community
+langchain-groq
+langchain-huggingface
+langchain-embeddings
+
+# For environment variables
+python-dotenv
+
+# For prompt templates
+jinja2
+
+# Optional: For progress bars, etc.
+tqdm
+
+# If using Ollama or llama-cpp-python for local LLMs (optional)
+# ollama
+# llama-cpp-python
+
+# For OpenAI/Groq LLMs (if needed)
+openai
+
+# For web scraping (if needed)
+lxml
+
+# For compatibility
+typing-extensions
