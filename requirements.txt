@@ -22,7 +22,7 @@ langchain-core
 langchain-community
 langchain-groq
 langchain-huggingface
-langchain-embeddings
+# langchain-embeddings
 
 requests
 pandas
